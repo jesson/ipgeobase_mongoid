@@ -4,7 +4,7 @@ class IpgeobaseCity
   include Mongoid::Document
 
   field :geo_id, type: Integer
-  index [[:geo_id, Mongo::ASCENDING]]
+  index [[:geo_id, Mongoid::ASCENDING]]
 
   field :city, type: String
   field :region, type: String
