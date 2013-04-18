@@ -4,7 +4,7 @@ class IpgeobaseCity
   include Mongoid::Document
 
   field :geo_id, type: Integer
-  index { geo_id: 1 }
+  index({ geo_id: 1 })
 
   field :city, type: String
   field :region, type: String
