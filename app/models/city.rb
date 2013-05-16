@@ -1,7 +1,8 @@
 # coding: utf-8
 
-class IpgeobaseCity
+class City
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :geo_id, type: Integer
   index({ geo_id: 1 })
@@ -14,8 +15,8 @@ class IpgeobaseCity
   field :lon, type: Float
 
 
-  belongs_to :country, class_name: 'IpgeobaseCountry'
-  has_many :ips, class_name: 'IpgeobaseIp'
+  belongs_to :country, class_name: 'Country'
+  has_many :ips, class_name: 'Ip'
 
   validates_presence_of :city, :country, :geo_id
 end
