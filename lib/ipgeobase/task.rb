@@ -10,7 +10,7 @@ module Ipgeobase
       else
         puts 'downloading database'
         url = 'http://ipgeobase.ru/files/db/Main/geo_files.tar.gz'
-        `curl -0 #{url} | tar -xzO #{file} | iconv -f cp1251 -t utf8`
+        `curl -0 #{url} | tar -xzO #{filename} | iconv -f cp1251 -t utf8`
       end
     end
   end
